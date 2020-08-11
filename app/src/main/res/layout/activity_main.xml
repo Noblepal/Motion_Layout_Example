@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/m_motion_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="16dp"
+    app:layoutDescription="@xml/new_motion_scene"
+    app:showPaths="false"
+    tools:showPaths="true">
+
+    <TextView
+        android:id="@+id/tvNotifications"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@drawable/green_background"
+        android:gravity="center"
+        android:padding="6dp"
+        android:text="4 Notifications"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/tvMyAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMyAccount"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/white_background"
+        android:gravity="center"
+        android:padding="6dp"
+        android:text="My Account"
+        android:textColor="#000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/cvFarm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNotifications" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvFarm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toTopOf="@id/cvActivities"
+        app:layout_constraintEnd_toStartOf="@id/cvWorkers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMyAccount">
+
+        <LinearLayout
+            android:id="@+id/llFarm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/imgFarm"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_farm" />
+
+            <TextView
+                android:id="@+id/tvFarm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Farm"
+                android:textColor="@color/background"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvWorkers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/cvFarm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cvFarm"
+        app:layout_constraintTop_toTopOf="@id/cvFarm">
+
+        <LinearLayout
+            android:id="@+id/llWorkers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/imgWorkers"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_workers" />
+
+            <TextView
+                android:id="@+id/tvWorkers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Workers"
+                android:textColor="@color/background"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvActivities"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvMarketPlace"
+        app:layout_constraintEnd_toStartOf="@id/cvAnalyses"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvFarm">
+
+        <LinearLayout
+            android:id="@+id/llActivities"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <RelativeLayout
+                android:id="@+id/rlActivities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgShrimpLeft"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_shrimp"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/imgMain"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_activities" />
+
+                <ImageView
+                    android:id="@+id/imgShrimpRight"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_centerInParent="true"
+                    android:rotation="180"
+                    android:src="@drawable/ic_shrimp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tvActivities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Activities"
+                android:textColor="@color/background"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/vActivities"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/background"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/llLarvae"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/tvLarvae"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_larvae" />
+
+                <ImageView
+                    android:id="@+id/imgLarvae"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:rotation="-69"
+                    android:src="@drawable/ic_larvae" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLarvaeBased"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Larvae based activities"
+                android:textColor="@color/background"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvAnalyses"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/cvActivities"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cvActivities"
+        app:layout_constraintTop_toTopOf="@id/cvActivities">
+
+        <LinearLayout
+            android:id="@+id/llAnalyses"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/imgAnalyses"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_analyses" />
+
+            <TextView
+                android:id="@+id/tvAnalyses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Anayses"
+                android:textColor="@color/background"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvMarketPlace"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/white_background"
+        android:gravity="center"
+        android:padding="6dp"
+        android:text="Marketplace"
+        android:textColor="#000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvActivities" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

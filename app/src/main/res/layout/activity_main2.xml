@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvActivities"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_margin="16dp"
+        android:elevation="0dp"
+        motion:cardCornerRadius="8dp" />
+
+
+    <ImageView
+        android:id="@+id/imgShrimpLeft"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_centerInParent="true"
+        android:elevation="5dp"
+        android:src="@drawable/ic_shrimp"
+        android:visibility="visible"
+        motion:layout_constraintBottom_toBottomOf="@+id/imgMain"
+        motion:layout_constraintEnd_toStartOf="@id/imgMain"
+        motion:layout_constraintTop_toTopOf="@id/imgMain" />
+
+    <ImageView
+        android:id="@+id/imgMain"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:elevation="3dp"
+        android:src="@drawable/ic_activities"
+        motion:layout_constraintEnd_toEndOf="@+id/cvActivities"
+        motion:layout_constraintStart_toStartOf="@+id/cvActivities"
+        motion:layout_constraintTop_toTopOf="@+id/cvActivities" />
+
+    <ImageView
+        android:id="@+id/imgShrimpRight"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:elevation="5dp"
+        android:rotation="180"
+        android:src="@drawable/ic_shrimp"
+        android:visibility="visible"
+        motion:layout_constraintBottom_toBottomOf="@+id/imgMain"
+        motion:layout_constraintStart_toEndOf="@id/imgMain"
+        motion:layout_constraintTop_toTopOf="@id/imgMain" />
+
+    <TextView
+        android:id="@+id/tvActivities"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="3dp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Activities"
+        android:textColor="@color/background"
+        android:textSize="18sp"
+        motion:layout_constraintEnd_toEndOf="@+id/cvActivities"
+        motion:layout_constraintStart_toStartOf="@+id/cvActivities"
+        motion:layout_constraintTop_toBottomOf="@+id/imgMain" />
+
+    <View
+        android:id="@+id/vActivities"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_margin="16dp"
+        android:background="@color/background"
+        android:elevation="3dp"
+        motion:layout_constraintEnd_toEndOf="@+id/cvActivities"
+        motion:layout_constraintStart_toStartOf="@+id/cvActivities"
+        motion:layout_constraintTop_toBottomOf="@+id/tvActivities" />
+
+    <LinearLayout
+        android:id="@+id/llLarvae"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="3dp"
+        android:visibility="visible"
+        android:gravity="center_horizontal"
+        motion:layout_constraintEnd_toEndOf="@id/cvActivities"
+        motion:layout_constraintStart_toStartOf="@id/cvActivities"
+        motion:layout_constraintTop_toBottomOf="@id/vActivities">
+
+        <ImageView
+            android:id="@+id/tvLarvae"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_larvae" />
+
+        <ImageView
+            android:id="@+id/imgLarvae"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:rotation="-69"
+            android:src="@drawable/ic_larvae" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvLarvaeBased"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:elevation="3dp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Larvae based activities"
+        android:textColor="@color/background"
+        android:textSize="18sp"
+        motion:layout_constraintEnd_toEndOf="@id/cvActivities"
+        motion:layout_constraintStart_toStartOf="@id/cvActivities"
+        motion:layout_constraintTop_toBottomOf="@id/llLarvae" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

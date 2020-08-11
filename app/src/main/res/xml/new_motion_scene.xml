@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/m_end"
+        motion:constraintSetStart="@+id/m_start"
+        motion:duration="700"
+        motion:motionInterpolator="easeInOut">
+        <OnClick
+            motion:dragDirection="dragRight"
+            motion:targetId="@id/cvActivities"
+            motion:touchAnchorId="@+id/cvActivities"
+            motion:touchAnchorSide="right" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/m_start">
+
+        <Constraint
+            android:id="@+id/imgMain"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:elevation="5dp"
+            android:src="@drawable/ic_activities"
+            motion:layout_constraintEnd_toEndOf="@+id/cvActivities"
+            motion:layout_constraintStart_toStartOf="@+id/cvActivities"
+            motion:layout_constraintTop_toTopOf="@+id/cvActivities" />
+        <Constraint
+            android:id="@+id/tvActivities"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:elevation="3dp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:textColor="@color/background"
+            android:textSize="18sp"
+            motion:layout_constraintEnd_toEndOf="@+id/cvActivities"
+            motion:layout_constraintStart_toStartOf="@+id/cvActivities"
+            motion:layout_constraintTop_toBottomOf="@+id/imgMain">
+
+            <CustomAttribute
+                motion:attributeName="text"
+                motion:customStringValue="Activities" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/m_end">
+        <Constraint
+            android:id="@+id/cvActivities"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            motion:layout_constraintBottom_toTopOf="@id/tvMarketPlace"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/cvFarm" />
+
+        <Constraint
+            android:id="@+id/tvMyAccount"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/tvNotifications" />
+
+        <Constraint
+            android:id="@+id/tvNotifications"
+            android:layout_margin="16dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/cvFarm"
+            android:layout_width="180dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="24dp"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/imgFarm"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/tvFarm"
+            android:visibility="gone" />
+
+        <Constraint
+            android:id="@+id/cvWorkers"
+            android:layout_width="180dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="24dp"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/tvWorkers"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/imgWorkers"
+            android:visibility="gone" />
+
+        <Constraint
+            android:id="@+id/cvAnalyses"
+            android:layout_width="10dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="24dp"
+            motion:layout_constraintEnd_toEndOf="parent" />
+        <Constraint
+            android:id="@+id/tvAnalyses"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/imgAnalyses"
+            android:visibility="gone" />
+
+        <Constraint
+            android:id="@+id/tvMarketPlace"
+            android:layout_height="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/llLarvae"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:elevation="3dp"
+            android:gravity="center_horizontal"
+            motion:layout_constraintEnd_toEndOf="@id/cvActivities"
+            motion:layout_constraintStart_toStartOf="@id/cvActivities"
+            motion:layout_constraintTop_toBottomOf="@id/vActivities" />
+
+        <Constraint
+            android:id="@+id/vActivities"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="@color/background"
+            android:elevation="2dp"
+            motion:layout_constraintEnd_toEndOf="@+id/cvActivities"
+            motion:layout_constraintStart_toStartOf="@+id/cvActivities"
+            motion:layout_constraintTop_toBottomOf="@+id/tvActivities" />
+
+        <Constraint
+            android:id="@+id/imgShrimpLeft"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerInParent="true"
+            android:elevation="5dp"
+            android:src="@drawable/ic_shrimp"
+            android:visibility="visible"
+            motion:layout_constraintBottom_toBottomOf="@+id/imgMain"
+            motion:layout_constraintEnd_toStartOf="@id/imgMain"
+            motion:layout_constraintTop_toTopOf="@id/imgMain" />
+
+        <Constraint
+            android:id="@+id/imgShrimpRight"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:elevation="5dp"
+            android:rotation="180"
+            android:src="@drawable/ic_shrimp"
+            android:visibility="visible"
+            motion:layout_constraintBottom_toBottomOf="@+id/imgMain"
+            motion:layout_constraintStart_toEndOf="@id/imgMain"
+            motion:layout_constraintTop_toTopOf="@id/imgMain" />
+
+        <Constraint
+            android:id="@+id/tvActivities"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:elevation="3dp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Activities"
+            android:textColor="@color/background"
+            android:textSize="18sp"
+            motion:layout_constraintEnd_toEndOf="@+id/cvActivities"
+            motion:layout_constraintStart_toStartOf="@+id/cvActivities"
+            motion:layout_constraintTop_toBottomOf="@+id/imgMain">
+            <CustomAttribute
+                motion:attributeName="text"
+                motion:customStringValue="Shrimp based activities" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/tvLarvaeBased"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:elevation="3dp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:textColor="@color/background"
+            android:textSize="18sp"
+            motion:layout_constraintEnd_toEndOf="@id/cvActivities"
+            motion:layout_constraintStart_toStartOf="@id/cvActivities"
+            motion:layout_constraintTop_toBottomOf="@id/llLarvae">
+
+            <CustomAttribute
+                motion:attributeName="text"
+                motion:customStringValue="Larvae based activities" />
+
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/imgMain"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_centerInParent="true"
+            android:elevation="3dp"
+            android:src="@drawable/ic_activities"
+            motion:layout_constraintEnd_toEndOf="@+id/cvActivities"
+            motion:layout_constraintStart_toStartOf="@+id/cvActivities"
+            motion:layout_constraintTop_toTopOf="@+id/cvActivities" />
+
+    </ConstraintSet>
+
+</MotionScene>
